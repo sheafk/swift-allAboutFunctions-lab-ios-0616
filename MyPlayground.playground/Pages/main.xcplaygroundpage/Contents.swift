@@ -17,12 +17,27 @@
 
 
 
+func frozen() {
+    print("Let it go!")
+}
+
+frozen()
+
 
 
 /*: question2
  ### 2. Write a function named `frozenAgain` that takes no arguments. Declare a constant in the body of the function, and assign it the value "Let it go!". Then print it to the console.
  */
 // write your code here
+
+func frozenAgain() {
+    
+    let answer = "Let it go!"
+    
+    print("\(answer)")
+}
+
+frozenAgain()
 
 
 
@@ -33,12 +48,31 @@
 // write your code here
 
 
+func favCharacter (character: String) {
+    
+    print("My favorite character is \(character).")
+}
+
+favCharacter("Big Bird")
+
 
 
 /*: question4
  ### 4. Call the function you wrote in Question 3 using a constant you define. Then call it using a variable. Change the value of the variable, and call it again. What do you see in the console?
  */
 // write your code here
+
+var greatCharacter = "Luke Skywalker" //It is a total coincidence that I chose the same character as the solution!
+
+favCharacter(greatCharacter)
+
+let anotherCharacter = "C3P0"
+
+favCharacter(anotherCharacter)
+
+greatCharacter = "Darth Vader"
+
+favCharacter(greatCharacter)
 
 
 
@@ -48,6 +82,12 @@
  */
 // write your code here
 
+func problems (number: Int) {
+    
+    print("I got \(number) problems but Swift aint one.")
+}
+
+problems(50000)
 
 
 
@@ -56,7 +96,12 @@
  */
 // write your code here
 
+func rankBand(band: String, rank: Int) {
+    
+    print("My #\(rank) favorite band is \(band).")
+}
 
+rankBand("Hall and Oats", rank: 7)
 
 
 /*: question7
@@ -66,7 +111,7 @@ func badFavoriteBand(bandName: String, position: Int) {
     print("My #\(position) favorite band is \(bandName).")
 }
 
-badFavoriteBand("The Beatles", 2)
+badFavoriteBand("The Beatles", position: 2)
 
 
 
@@ -78,8 +123,8 @@ func alsoBadFavoriteBand(bandName: String, position: String) {
     print("My #\(position) favorite band is \(bandName)")
 }
 
-alsoBadFavoriteBand("Blink-182", position: 42)
-
+//alsoBadFavoriteBand("Blink-182", position: 42) //It is trying to use an Int where the function asks for a String.
+alsoBadFavoriteBand("Blink-182", position: "forty-two")
 
 
 
@@ -89,12 +134,24 @@ alsoBadFavoriteBand("Blink-182", position: 42)
 // write your code here
 
 
+func madLib (character: String, noun: String, preposition: String) {
+    
+    print("To \(noun) and \(preposition), \(character)!")
+}
 
+madLib("Han Solo", noun: "stringbean", preposition: "at")
 
 /*: question10
  ### 10. Create a function that takes no arguments and returns the string "Buzz Lightyear to the rescue!"
  */
 // write your code here
+
+func buzzQuote() {
+    
+    print("Buzz Lightyear to the rescue!")
+}
+
+buzzQuote()
 
 
 
@@ -105,6 +162,13 @@ alsoBadFavoriteBand("Blink-182", position: 42)
 // write your code here
 
 
+func randomNumber() -> Int {
+    
+    return 9
+    
+}
+
+randomNumber()
 
 
 /*: question12
@@ -113,7 +177,14 @@ alsoBadFavoriteBand("Blink-182", position: 42)
 // write your code here
 
 
+func toInfinity(character: String) {
+    
+    let upperCaseCharacter = character.uppercaseString
+    
+    print("To infinity and beyond, \(upperCaseCharacter)!")
+}
 
+toInfinity("Mickey Mouse")
 
 /*:
  [Solution](solution)
